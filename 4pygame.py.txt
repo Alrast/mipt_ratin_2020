@@ -1,0 +1,20 @@
+import pygame
+from pygame.draw import *
+pygame.init()
+FPS=30
+screen = pygame.display.set_mode((927,769))
+line(screen, (223,194,117), (105,105), (245,560), 30)
+line(screen, (223,194,117), (875,105), (735,560), 30)
+rect(screen, (50,255,50), (0,0,927,82))
+
+pygame.display.update()
+clock = pygame.time.Clock()
+finished = False
+
+while not finished:
+    clock.tick(FPS)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            finished = True
+
+pygame.quit()
