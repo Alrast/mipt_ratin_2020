@@ -3,10 +3,17 @@ from pygame.draw import *
 pygame.init()
 FPS=30
 screen = pygame.display.set_mode((927,769))
-line(screen, (223,194,117), (105,105), (245,560), 30)
-line(screen, (223,194,117), (875,105), (735,560), 30)
+surface = pygame.Surface((927,769), pygame.SRCALPHA)
+circle(screen, (255,102,0), (464,769), 200)
+ellipse(screen, (234,199,176), rect(surface, (0,0,0), (45,40,70,90)))
+ellipse(screen, (234,199,176), rect(surface, (0,0,0), (805,40,70,90)))
+line(screen, (234,199,176), (75,105), (215,560), 30)
+line(screen, (234,194,176), (845,105), (705,560), 30)
 rect(screen, (50,255,50), (0,0,927,82))
-
+#(157,394)
+x=100
+y=250
+polygon(screen, (250,102,0), [(107+x,364+y), (172+x,316+y), (229+x,382+y), (187+x,469+y), (102+x,459+y)])
 pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
