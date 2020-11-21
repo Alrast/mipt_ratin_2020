@@ -134,3 +134,18 @@ while not finished:
         pygame.display.update()
         screen.fill(BLACK)
 pygame.quit()
+toplist=[]
+print('Введите nickname')
+nick = input()
+f = open(r'C:\Users\User\mipt_ratin_2020\playersc0re.txt', 'r')
+for line in f:
+    toplist.append(line)
+toplist.append(str((nick, sum)))
+f.close()
+f = open(r'C:\Users\User\mipt_ratin_2020\playersc0re.txt', 'w')
+for i in range(len(toplist)):
+    f.write(toplist[i])
+f.close()
+f = open(r'C:\Users\User\mipt_ratin_2020\playersc0re.txt', 'r')
+for line in f:
+    print(line)
